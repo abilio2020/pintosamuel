@@ -1,0 +1,102 @@
+/* ====== PALETA / BASE ====== */
+:root{
+  --gold:#D6B25E;
+  --gold-2:#E6C878;
+  --gold-3:#F1DA9A;
+  --bg:#000;
+  --panel:#0f0f0f;
+  --muted:#b9a270;
+}
+html,body{
+  background:#000;color:#e8e8e8;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans";
+  scroll-behavior:smooth;
+}
+h1,h2,h3,h4{font-family:Cinzel,serif;letter-spacing:.02em}
+.brand-gold{color:var(--gold)!important}
+
+/* ====== NAVBAR ====== */
+.nav-border{background:#000;border-bottom:1px solid rgba(214,178,94,.15)}
+.navbar .nav-link{color:#ddd}
+.navbar .nav-link:hover{color:#fff}
+nav{ background:#000 !important; } /* garante preto mesmo com Materialize */
+.thin-sep{height:1px;background:linear-gradient(90deg,transparent,rgba(214,178,94,.35),transparent)}
+
+/* ====== HERO + LUZ/VINHETA/NOISE ====== */
+.bg-dark-gradient{background:radial-gradient(90% 70% at 50% 0%,rgba(214,178,94,.06),rgba(0,0,0,0) 60%),#000}
+.hero{padding:120px 0 80px; position:relative; overflow:hidden}
+.hero .subtitle{font-size:clamp(20px,2.2vw,32px);color:var(--gold);letter-spacing:.5px}
+.hero::before{
+  content:"";position:absolute;inset:-20%;
+  background:radial-gradient(60% 40% at 50% 0%, rgba(214,178,94,.18), transparent 60%);
+  filter: blur(20px); pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 80% at 50% 110%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.6) 60%);
+  pointer-events:none;
+}
+
+/* logomarca mini (igual vibe do site) */
+.logo-mark{
+  width:42px;height:42px;border:2px solid var(--gold);
+  border-radius:6px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 1px rgba(214,178,94,.15) inset, 0 6px 22px rgba(214,178,94,.18);
+}
+.logo-mark::after{content:"";width:14px;height:14px;background:var(--gold);border-radius:50%}
+
+/* ====== BOTÕES ====== */
+.btn-gold{
+  background:linear-gradient(#E6C878,#D6B25E);
+  color:#111;font-weight:800;border:1px solid var(--gold-3);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 10px 24px rgba(230,200,120,.22);
+  border-radius:14px; letter-spacing:.3px;
+}
+.btn-gold:hover{transform:translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 16px 36px rgba(230,200,120,.32)}
+.btn-outline-gold{border:2px solid var(--gold);color:#fff;border-radius:14px}
+.btn-outline-gold:hover{background:#D6B25E;color:#111}
+
+/* ====== BLOCOS ====== */
+.section-py{padding:72px 0}
+.badge-stat{
+  background:rgba(214,178,94,.08);border:1px solid rgba(214,178,94,.25);
+  border-radius:16px;padding:18px 22px
+}
+.ticker{
+  background:linear-gradient(180deg,#3a0f0f,#2b0b0b);
+  color:#fff;border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0;font-weight:700
+}
+.strike{background:linear-gradient(180deg,rgba(214,178,94,.08),rgba(214,178,94,0));padding:50px 0;margin-top:20px}
+.strike h2{font-size:56px;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+
+.panel,.price-card{
+  background:var(--panel);border:1px solid rgba(214,178,94,.20);
+  border-radius:18px;padding:28px;height:100%;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.panel h3,.panel h4{color:var(--gold)}
+.panel:hover,.price-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 40px rgba(214,178,94,.18), 0 0 0 1px rgba(214,178,94,.28) inset;
+}
+
+/* ====== PREÇOS ====== */
+.price-card{background:linear-gradient(180deg,#101010,#0b0b0b)}
+.price-card .price{font-size:40px;font-weight:800;color:var(--gold)}
+.price-card .tag{background:rgba(214,178,94,.15);color:var(--gold);padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px}
+.price-card ul{list-style:none;margin:0;padding-left:0}
+.price-card li{margin:10px 0;display:flex;gap:10px;align-items:flex-start}
+.price-card li .material-icons{font-size:20px;color:var(--gold)}
+.price-card.highlight{outline:2px solid var(--gold);box-shadow:0 10px 40px rgba(214,178,94,.2)}
+
+/* ====== MENTOR ====== */
+.mentor-photo{border-radius:50%;padding:6px;background:linear-gradient(45deg,#E6C878,#D6B25E);box-shadow:0 6px 26px rgba(214,178,94,.25)}
+.mentor-photo img{border-radius:50%;display:block}
+
+/* ====== FOOTER ====== */
+.footer{background:#0b0b0b;border-top:1px solid rgba(214,178,94,.15)}
+.footer .sep{height:1px;background:linear-gradient(90deg,transparent,rgba(214,178,94,.25),transparent);margin:18px 0}
+
+/* ====== EXTRA ====== */
+.max-w{max-width:760px}
