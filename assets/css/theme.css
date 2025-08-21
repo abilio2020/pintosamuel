@@ -277,3 +277,36 @@ body {
   .panel, .price-card { padding: 22px; border-radius: 16px; }
   .price-card .price { font-size: clamp(28px, 8.2vw, 40px); }
 }
+/* Logo do topo (na hero) – escala fluida */
+.hero .logo-img,
+.hero .hero-logo {
+  width: clamp(180px, 28vw, 360px); /* min 180px, cresce com a viewport, máx 360px */
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;             /* centralizada e com espacinho abaixo */
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Se for a logo na navbar */
+.navbar-brand .logo-img {
+  max-height: 56px;        /* desktop */
+  width: auto;
+}
+@media (max-width: 991px){
+  .navbar-brand .logo-img { max-height: 48px; }  /* tablet */
+}
+@media (max-width: 575px){
+  .navbar-brand .logo-img { max-height: 40px; }  /* mobile */
+}
+
+/* Menos “respiro” no topo da hero */
+.hero {
+  padding-top: 72px;        /* tava 120px; ajusta conforme o gosto */
+  padding-bottom: 64px;
+}
+
+/* Cartões de métricas – um pouco menos altos e com gap mais leve */
+.badge-stat { padding: 16px 18px; border-radius: 14px; }
+
+
